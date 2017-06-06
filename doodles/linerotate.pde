@@ -1,9 +1,10 @@
 
+class LineRotate implements Doodle {
+
 int centerX;
 int centerY;
 
 void setup() {
-  size(600, 600);
   centerX = width / 2;
   centerY = height / 2;
   noFill();
@@ -20,4 +21,6 @@ void draw() {
     int lineX = i * 10; 
     line(-500, lineX, 500, lineX);
   }
+}
+
 }

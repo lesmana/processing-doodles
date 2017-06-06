@@ -1,9 +1,10 @@
 
+class CircleWave implements Doodle {
+
 int centerX;
 int centerY;
 
 void setup() {
-  size(600, 600);
   centerX = width / 2;
   centerY = height / 2;
   noFill();
@@ -19,4 +20,6 @@ void draw() {
     rotate(radians(frameCount / 10.0));
     arc(0, 0, i * 20, i * 20, 0, PI);
   }
+}
+
 }
