@@ -3,7 +3,7 @@ Doodle doodle;
 
 void setup() {
   size(600, 600);
-  doodle = getDoodle();
+  doodle = getDoodle(args);
   doodle.setup();
 }
 
@@ -16,7 +16,7 @@ interface Doodle {
   void draw();
 }
 
-Doodle getDoodle() {
+Doodle getDoodle(String[] args) {
   String arg;
   if (args != null) {
     arg = args[0];
