@@ -38,6 +38,9 @@ Doodle getDoodle(String[] args) {
       case "waveawaydots":
         doodle = new waveawaydots();
         break;
+      case "circledots":
+        doodle = new circledots();
+        break;
       default:
         println("unknown arg: " + args[0]);
         break;
