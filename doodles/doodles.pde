@@ -23,20 +23,20 @@ Doodle getDoodle(String[] args) {
       case "circlewave":
         doodle = new circlewave();
         break;
-      case "lineintersect":
-        doodle = new lineintersect();
-        break;
       case "linerotate":
         doodle = new linerotate();
+        break;
+      case "wavedots":
+        doodle = new wavedots();
         break;
       case "pulsedots":
         doodle = new pulsedots();
         break;
+      case "lineintersect":
+        doodle = new lineintersect();
+        break;
       case "waveawaydots":
         doodle = new waveawaydots();
-        break;
-      case "wavedots":
-        doodle = new wavedots();
         break;
       default:
         println("unknown arg: " + args[0]);
