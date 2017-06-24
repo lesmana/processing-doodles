@@ -17,38 +17,33 @@ interface Doodle {
 }
 
 Doodle getDoodle(String[] args) {
-  String arg;
-  if (args != null) {
-    arg = args[0];
-  } else {
-    arg = "no arg";
-  }
   Doodle doodle = null;
-  switch (arg) {
-    case "circlewave":
-      doodle = new CircleWave();
-      break;
-    case "lineintersect":
-      doodle = new LineIntersect();
-      break;
-    case "linerotate":
-      doodle = new LineRotate();
-      break;
-    case "pulsedots":
-      doodle = new PulseDots();
-      break;
-    case "waveawaydots":
-      doodle = new WaveAwayDots();
-      break;
-    case "wavedots":
-      doodle = new WaveDots();
-      break;
-    case "no arg":
-      println("no args given");
-      break;
-    default:
-      println("unknown arg: " + arg);
-      break;
+  if (args != null) {
+    switch (args[0]) {
+      case "circlewave":
+        doodle = new CircleWave();
+        break;
+      case "lineintersect":
+        doodle = new LineIntersect();
+        break;
+      case "linerotate":
+        doodle = new LineRotate();
+        break;
+      case "pulsedots":
+        doodle = new PulseDots();
+        break;
+      case "waveawaydots":
+        doodle = new WaveAwayDots();
+        break;
+      case "wavedots":
+        doodle = new WaveDots();
+        break;
+      default:
+        println("unknown arg: " + args[0]);
+        break;
+    }
+  } else {
+    println("no args given");
   }
   if (doodle == null) {
     println("default to circlewave");
