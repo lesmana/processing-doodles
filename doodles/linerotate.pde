@@ -1,5 +1,5 @@
 
-class LineRotate implements Doodle {
+class linerotate implements Doodle {
 
 int centerX;
 int centerY;

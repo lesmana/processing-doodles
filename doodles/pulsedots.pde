@@ -1,5 +1,5 @@
 
-class PulseDots implements Doodle {
+class pulsedots implements Doodle {
 
 void setup() {
   stroke(0);

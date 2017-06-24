@@ -21,22 +21,22 @@ Doodle getDoodle(String[] args) {
   if (args != null) {
     switch (args[0]) {
       case "circlewave":
-        doodle = new CircleWave();
+        doodle = new circlewave();
         break;
       case "lineintersect":
-        doodle = new LineIntersect();
+        doodle = new lineintersect();
         break;
       case "linerotate":
-        doodle = new LineRotate();
+        doodle = new linerotate();
         break;
       case "pulsedots":
-        doodle = new PulseDots();
+        doodle = new pulsedots();
         break;
       case "waveawaydots":
-        doodle = new WaveAwayDots();
+        doodle = new waveawaydots();
         break;
       case "wavedots":
-        doodle = new WaveDots();
+        doodle = new wavedots();
         break;
       default:
         println("unknown arg: " + args[0]);
@@ -47,7 +47,7 @@ Doodle getDoodle(String[] args) {
   }
   if (doodle == null) {
     println("default to circlewave");
-    doodle = new CircleWave();
+    doodle = new circlewave();
   }
   return doodle;
 }

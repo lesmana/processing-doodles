@@ -1,5 +1,5 @@
 
-class WaveDots implements Doodle {
+class wavedots implements Doodle {
 
 void setup() {
   stroke(0);

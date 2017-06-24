@@ -1,5 +1,5 @@
 
-class CircleWave implements Doodle {
+class circlewave implements Doodle {
 
 int centerX;
 int centerY;

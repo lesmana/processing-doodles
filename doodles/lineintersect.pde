@@ -1,5 +1,5 @@
 
-class LineIntersect implements Doodle {
+class lineintersect implements Doodle {
 
 void setup() {
   stroke(0);
