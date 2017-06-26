@@ -41,6 +41,9 @@ Doodle getDoodle(String[] args) {
       case "circledots":
         doodle = new circledots();
         break;
+      case "spiraldots":
+        doodle = new spiraldots();
+        break;
       default:
         println("unknown arg: " + args[0]);
         break;
