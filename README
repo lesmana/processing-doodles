@@ -8,11 +8,3 @@ plan is to write script to generate looping video of each sketch
 then upload to some gallery
 then ???
 PROFITT!!!1
-
-the processing editor cannot supply command line arguments
-
-to invoke with command line arguments use following
-
-processing-java --sketch=doodles --run doodlename
-
-there is a default doodle for when invokin from editor
