@@ -1,7 +1,6 @@
 
-class waveawaydots implements Doodle {
-
 void setup() {
+  size(600, 600);
   stroke(0);
   strokeWeight(10);
 }
@@ -34,6 +33,4 @@ void draw() {
   if(frameCount % 60 == 0) {
     println(frameRate);
   }
-}
-
 }

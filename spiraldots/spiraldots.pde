@@ -1,7 +1,6 @@
 
-class spiraldots implements Doodle {
-
 void setup() {
+  size(600, 600);
   stroke(0);
   strokeWeight(8);
 }
@@ -20,6 +19,4 @@ void draw() {
       point(0, 0);
     }
   }
-}
-
 }

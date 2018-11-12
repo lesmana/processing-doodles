@@ -1,7 +1,6 @@
 
-class circledots implements Doodle {
-
 void setup() {
+  size(600, 600);
   stroke(0);
   strokeWeight(8);
 }
@@ -13,6 +12,4 @@ void draw() {
     rotate(radians(frameCount / 30.0));
     point(0, i * 1.2);
   }
-}
-
 }
