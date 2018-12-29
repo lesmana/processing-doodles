@@ -1,23 +1,15 @@
 
-int centerX;
-int centerY;
-
 void setup() {
-  size(600, 600);
-  centerX = width / 2;
-  centerY = height / 2;
-  noFill();
+  size(300, 300);
   stroke(0);
-  strokeWeight(8);
-  strokeCap(SQUARE);
+  strokeWeight(3);
 }
 
 void draw() {
   background(255);
-  translate(centerX, centerY);
-  for(int i = 2; i < 20; i++) {
-    rotate(radians(frameCount / 10.0));
-    int lineX = i * 10;
-    line(-500, lineX, 500, lineX);
+  translate(150, 150);
+  for(int i = 1; i < 20; i++) {
+    rotate(radians(frameCount * 0.1));
+    line(-140, 30, 140, 30);
   }
 }
