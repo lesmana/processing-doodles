@@ -25,7 +25,7 @@ echo "given newname: $2"
 if [ -d "$1" ]; then
   # if given dirname
   # strip trailing slash if exists
-  n="${1%%/}"
+  n=$(realpath --relative-to=. "$1")
   # ensure that dirname contains pde file
   if [ -f "$n/$n.pde" ]; then
     olddir="$n"
@@ -64,7 +64,7 @@ fi
 # make sure second argument is not path
 d=$(dirname "$2")
 if [ "$d" = "." ]; then
-  n="${2%%/}"
+  n=$(realpath --relative-to=. "$2")
   newdir="$n"
   newfile="$n".pde
 else
@@ -75,7 +75,7 @@ fi
 echo "newdir: $newdir"
 echo "newfile: $newfile"
 
-mv -v $olddir $newdir
-mv -v $newdir/$oldfile $newdir/$newfile
+echo mv -v $olddir $newdir
+echo mv -v $newdir/$oldfile $newdir/$newfile
 
 trap - EXIT
