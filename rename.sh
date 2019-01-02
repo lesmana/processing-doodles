@@ -4,8 +4,22 @@ trap 'echo error exit' EXIT
 
 if [ $# != 2 ]; then
   echo "need arguments: oldname newname"
+  echo "will rename processing sketch dir from oldname to newname"
+  echo "oldname/oldname.pde will be renamed to newname/newname.pde"
+  echo "oldname may be:"
+  echo "  sketchname"
+  echo "  sketchname/"
+  echo "  sketchname/sketchname.pde"
+  echo "and must exist"
+  echo "newname may be:"
+  echo "  sketchname"
+  echo "  sketchname/"
+  echo "and must not exist"
   exit 1
 fi
+
+echo "given oldname: $1"
+echo "given newname: $2"
 
 # make sure first argument is valid processing sketch dir name
 if [ -d "$1" ]; then
@@ -38,6 +52,9 @@ else
   exit 1
 fi
 
+echo "olddir: $olddir"
+echo "oldfile: $oldfile"
+
 # make sure second argument does not exists
 if [ -e "$2" ]; then
   echo "newname already exists"
@@ -54,6 +71,9 @@ else
   echo "newname may not be subdir"
   exit 1
 fi
+
+echo "newdir: $newdir"
+echo "newfile: $newfile"
 
 echo mv -v $olddir $newdir
 echo mv -v $newdir/$oldfile $newdir/$newfile
