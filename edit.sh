@@ -17,7 +17,7 @@ echo "given sketchname: $1"
 # make sure sketchname is valid processing sketch dir or file
 if [ -d "$1" ]; then
   # if given dir name
-  n="${1%/}"
+  n=$(realpath --relative-to=. "$1")
   if [ -f "$n/$n.pde" ]; then
     sketchfilename="$n/$n.pde"
   else
@@ -29,7 +29,7 @@ elif [ -f "$1" ]; then
   d=$(dirname "$1")
   f=$(basename "$1" .pde)
   if [ "$d" == "$f" ]; then
-    sketchfilename="$1"
+    sketchfilename=$(realpath --relative-to=. "$1")
   else
     echo "sketchname is not valid processing sketch dir"
     exit 1
