@@ -75,7 +75,7 @@ fi
 echo "newdir: $newdir"
 echo "newfile: $newfile"
 
-echo mv -v $olddir $newdir
-echo mv -v $newdir/$oldfile $newdir/$newfile
+mv -v $olddir $newdir
+mv -v $newdir/$oldfile $newdir/$newfile
 
 trap - EXIT

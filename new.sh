@@ -38,9 +38,9 @@ else
   exit 1
 fi
 
-echo "will create: $sketchdir/$sketchfile"
+echo "create: $sketchdir/$sketchfile"
 
-echo mkdir "$sketchdir"
-echo touch "$sketchdir/$sketchfile"
+mkdir "$sketchdir"
+touch "$sketchdir/$sketchfile"
 
 trap - EXIT

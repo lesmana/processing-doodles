@@ -41,6 +41,6 @@ fi
 
 echo "sketchfilename: $sketchfilename"
 
-echo processing "$sketchfilename"
+processing "$sketchfilename"
 
 trap - EXIT
