@@ -3,7 +3,6 @@ void setup() {
   noFill();
   stroke(0);
   strokeWeight(4);
-  strokeCap(SQUARE);
 }
 
 void draw() {
@@ -11,7 +10,7 @@ void draw() {
   translate(10, 10);
   for(int i = 0; i < 120; i++) {
     int x = (i * 5) + 2;
-    float y = (sin(radians(frameCount * i * 0.02)) + 1) * 100;
+    float y = map(sin(radians(frameCount * i * 0.02)), -1, 1, 0, 200);
     line(x, 200, x, y);
   }
 }
