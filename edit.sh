@@ -3,7 +3,7 @@
 trap 'echo error exit' EXIT
 
 if [ $# != 1 ]; then
-  echo "need argument: name-of-processing-sketch-dir-or-file"
+  echo "need argument: name of processing sketch dir or file"
   echo "will open processing editor with sketch"
   echo "name can be:"
   echo "  sketchname"
