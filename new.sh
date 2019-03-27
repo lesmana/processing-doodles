@@ -18,11 +18,6 @@ fi
 
 echo "given sketchname: $1"
 
-if [ -e "$1" ]; then
-  echo "sketchname already exists"
-  exit 1
-fi
-
 d=$(dirname "$1")
 f=$(basename "$1" .pde)
 if [ "$d" = "." ]; then
@@ -35,6 +30,11 @@ elif [ "$d" == "$f" ]; then
   sketchfile="$f".pde
 else
   echo "sketchname is not valid processing sketch dir"
+  exit 1
+fi
+
+if [ -e "$sketchdir/$sketchfile" ]; then
+  echo "$sketchdir/$sketchfile already exists"
   exit 1
 fi
 
