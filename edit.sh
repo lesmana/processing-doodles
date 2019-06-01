@@ -35,11 +35,12 @@ elif [ -f "$1" ]; then
     exit 1
   fi
 else
-  echo "sketchname is neither sketch dir nor pde file"
+  echo "not able to determine valid sketchname from given sketchname"
   exit 1
 fi
 
 echo "sketchfilename: $sketchfilename"
+echo "opening processing editor with sketch"
 
 processing "$sketchfilename"
 
