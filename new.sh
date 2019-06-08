@@ -38,9 +38,19 @@ if [ -e "$sketchdir/$sketchfile" ]; then
   exit 1
 fi
 
-echo "create: $sketchdir/$sketchfile"
+echo "creating: $sketchdir/$sketchfile"
 
 mkdir "$sketchdir"
-touch "$sketchdir/$sketchfile"
+echo "
+void setup() {
+  size(400, 200);
+}
+
+void draw() {
+  background(255);
+}
+" > "$sketchdir/$sketchfile"
+
+echo "created. now go edit and have fun"
 
 trap - EXIT
