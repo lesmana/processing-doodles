@@ -1,10 +1,49 @@
 processing doodles of lesmana
+-----------------------------
 
-mainly optical art
+looping optical art animations
 
-no interactive sketches
+helper shell scripts
+--------------------
 
-plan is to write script to generate looping video of each sketch
-then upload to some gallery
-then ???
-PROFITT!!!1
+i like working on the command line.
+some processing peculiarities makes this cumbersome.
+
+processing is a bit finicky with
+how it wants the sketch source files:
+the sketch file must be located in a directory
+with the same name as the file.
+
+this makes renaming sketches particularly cumbersome.
+one has to rename the directory and then rename the file.
+creating new sketches also require two commands
+(directory then file).
+
+furthermore running the editor requires the sketch filename
+but running the sketch standalone require the sketch dirname.
+
+so i created a set of helper shell scripts
+that i can run with either the dirname or filename
+and the script will work out the correct name for the use case.
+
+new.sh will create a sketch as processing wants it:
+with matching directory and filename.
+bonus: some minimal boilerplate code.
+
+rename.sh will rename a sketch.
+taking care of matching directory and filename.
+
+edit.sh will open a sketch in the processing editor.
+
+run.sh will run the sketch standalone (without the editor).
+
+plan
+----
+
+write script to create video from sketch.
+
+also add watermark
+
+then upload videos somewhere like imgur.com
+
+maybe upload code to some processing gallery like openprocessing.org
