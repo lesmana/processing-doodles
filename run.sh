@@ -1,5 +1,9 @@
 #! /bin/sh
 
+# Copyright Lesmana Zimmer lesmana@gmx.de
+# Licensed under WTFPL version 2
+# http://www.wtfpl.net/about/
+
 trap 'echo error exit' EXIT
 
 if [ $# != 1 ]; then
