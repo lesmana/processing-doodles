@@ -1,4 +1,8 @@
 
+// Copyright Lesmana Zimmer lesmana@gmx.de
+// Licensed under WTFPL version 2
+// http://www.wtfpl.net/about/
+
 void setup() {
   size(400, 400);
   stroke(0);
